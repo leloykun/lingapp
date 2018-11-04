@@ -8,7 +8,7 @@ An app for the early detection of common women's diseases such as cervical cance
 https://infograph.venngage.com/ps/q5HPPcgu8C0/mhealth-pitchdeck
 
 ### Language and Requirements
-* Python 3.5
+* Python 3.*
 * Flask 
 * Flask WTF
 * Flask Bootstrap
