@@ -1,0 +1,35 @@
+{% from "_formhelpers.html" import render_field, render_field2 %}
+{% extends "bootstrap/base.html" %}
+{% block title %} Lingapp {% endblock %}
+{% block content %}
+  <img src="static/images/phone_pink.jpg" style="position:absolute" width="320">
+  <h1 style="position: absolute;
+           left: 85px;
+           top: 170px;
+           font-family: cursive, sans-serif;
+           font-weight: bold;
+           color:white">Lingapp</h1>
+  <div style="position:relative;
+              left: 70px;
+              top: 330px;
+              color:white">
+    <form method="POST" action="/", style="color:black">
+      <dl>
+        {{ form.csrf_token }}
+        {{ render_field(form.username) }}
+        {{ render_field(form.password) }}
+        <dt><input type="submit" value="Login" class="btn btn-primary">
+      </dl>
+    </form>
+  </div>
+  <p style="position:relative;
+            left: 130px;
+            top: 130px;
+            font-size:xx-small;
+            color:white">the care women deserve</p>
+  <p style="position:relative;
+            left: 45px;
+            top: 400px;
+            font-size:xx-small;
+            color:white">Note: this should not be used by non-health professionals</p>
+{% endblock %}

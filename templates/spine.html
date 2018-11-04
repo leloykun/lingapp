@@ -1,0 +1,31 @@
+{% from "_formhelpers.html" import render_field, render_field2 %}
+{% extends "bootstrap/base.html" %}
+{% block title %} Lower Back Pain {% endblock %}
+{% block content %}
+  <img src="static/images/phone.jpg" style="position:absolute" width="320">
+  <div class="form" style="position:relative;
+                           left: 40px;
+                           top: 105px;
+                           align-content: center;
+                           font-size: small">
+    <form method="POST" action="/spine">
+      <button type="button" onclick="window.location.href='/portal'" class="btn btn-dark">Back</button>
+      <dl>
+        {{ form.csrf_token }}
+        {{ render_field(form.pelvic_incidence) }}
+        {{ render_field(form.pelvic_tilt) }}
+        {{ render_field(form.pelvic_radius) }}
+        {{ render_field(form.pelvic_slope) }}
+        {{ render_field(form.sacral_slope) }}
+        {{ render_field(form.sacrum_angle) }}
+        {{ render_field2(form.lumbar_lordosis_angle) }}
+        {{ render_field2(form.degree_spondylolisthesis) }}
+        {{ render_field(form.direct_tilt) }}
+        {{ render_field(form.cervical_tilt) }}
+        {{ render_field(form.thoracic_slope) }}
+        {{ render_field(form.scoliosis_slope) }}
+        <dt><input type="submit" value="Analyze" class="btn btn-primary">
+      </dl>
+    </form>
+  </div>
+{% endblock %}

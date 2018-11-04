@@ -1,0 +1,32 @@
+{% from "_formhelpers.html" import render_field, render_field2 %}
+{% extends "bootstrap/base.html" %}
+{% block title %} Heart Disease {% endblock %}
+{% block content %}
+  <img src="static/images/phone.jpg" style="position:absolute" width="320">
+  <div class="form" style="position:relative;
+                           left: 40px;
+                           top: 105px;
+                           align-content: center;
+                           font-size: small">
+    <form method="POST" action="/heart">
+      <button type="button" onclick="window.location.href='/portal'" class="btn btn-dark">Back</button>
+      <dl>
+        {{ form.csrf_token }}
+        {{ render_field(form.age) }}
+        {{ render_field(form.sex) }}
+        {{ render_field(form.cp) }}
+        {{ render_field(form.trestbps) }}
+        {{ render_field(form.chol) }}
+        {{ render_field(form.fbs) }}
+        {{ render_field(form.restecg) }}
+        {{ render_field(form.thalach) }}
+        {{ render_field2(form.exang) }}
+        {{ render_field(form.oldpeak) }}
+        {{ render_field2(form.slope) }}
+        {{ render_field(form.ca) }}
+        {{ render_field(form.thal) }}
+        <dt><input type="submit" value="Analyze" class="btn btn-primary">
+      </dl>
+    </form>
+  </div>
+{% endblock %}

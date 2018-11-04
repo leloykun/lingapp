@@ -1,0 +1,28 @@
+{% from "_formhelpers.html" import render_field, render_field2 %}
+{% extends "bootstrap/base.html" %}
+{% block title %} Fertility {% endblock %}
+{% block content %}
+  <img src="static/images/phone.jpg" style="position:absolute" width="320">
+  <div class="form" style="position:relative;
+                           left: 40px;
+                           top: 105px;
+                           align-content: center;
+                           font-size: small">
+    <form method="POST" action="/fertility">
+      <button type="button" onclick="window.location.href='/portal'" class="btn btn-dark">Back</button>
+      <dl>
+        {{ form.csrf_token }}
+        {{ render_field(form.season) }}
+        {{ render_field(form.age) }}
+        {{ render_field2(form.childish_diseases) }}
+        {{ render_field(form.accident) }}
+        {{ render_field(form.surgical_intervention) }}
+        {{ render_field2(form.high_fevers) }}
+        {{ render_field2(form.alcoholism) }}
+        {{ render_field2(form.smokes) }}
+        {{ render_field2(form.num_hours_sitting) }}
+        <input type="submit" value="Analyze" class="btn btn-primary">
+      </dl>
+    </form>
+  </div>
+{% endblock %}

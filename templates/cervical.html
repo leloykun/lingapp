@@ -1,0 +1,29 @@
+{% from "_formhelpers.html" import render_field, render_field2 %}
+{% extends "bootstrap/base.html" %}
+{% block title %} Cervical Cancer {% endblock %}
+{% block content %}
+  <img src="static/images/phone.jpg" style="position:absolute" width="320">
+  <div class="form" style="position:relative;
+                           left: 40px;
+                           top: 105px;
+                           align-content: center;
+                           font-size: small">
+    <form method="POST" action="/cervical">
+      <button type="button" onclick="window.location.href='/portal'" class="btn btn-dark">Back</button>
+      <dl>
+        {{ form.csrf_token }}
+        {{ render_field(form.age) }}
+        {{ render_field(form.num_sexual_partners) }}
+        {{ render_field(form.pregnancies) }}
+        {{ render_field(form.smokes) }}
+        {{ render_field(form.hormonal_contraceptives) }}
+        {{ render_field(form.iud) }}
+        {{ render_field2(form.dx_std) }}
+        {{ render_field2(form.dx_cancer) }}
+        {{ render_field2(form.dx_cin) }}
+        {{ render_field2(form.dx_hpv) }}
+        <input type="submit" value="Analyze" class="btn btn-primary">
+      </dl>
+    </form>
+  </div>
+{% endblock %}

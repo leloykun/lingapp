@@ -1,0 +1,29 @@
+{% extends "bootstrap/base.html" %}
+{% block title %} Portal {% endblock %}
+{% block content %}
+  <img src="static/images/phone.jpg" style="position:absolute" width="320">
+  <button type="button" onclick="window.location.href='/'" class="btn btn-dark" style="position:absolute;
+                           left: 40px;
+                           top: 105px;
+                           font-size: small">Logout</button>
+  <div class="form" style="position:relative;">
+    <div style="position: absolute;
+                left: 85px;
+                top: 200px;
+                align-content: center">
+      <button type="button" onclick="window.location.href='/cervical'" class="btn btn-primary">Cervical Cancer</button>
+      <br />
+      <br />
+      <button type="button" onclick="window.location.href='/diabetes'" class="btn btn-primary">Diabetes</button>
+      <br />
+      <br />
+      <button type="button" onclick="window.location.href='/fertility'" class="btn btn-primary">Fertility</button>
+      <br />
+      <br />
+      <button type="button" onclick="window.location.href='/heart'" class="btn btn-primary">Heart Disease</button>
+      <br />
+      <br />
+      <button type="button" onclick="window.location.href='/spine'" class="btn btn-primary">Lower-back Pain</button>
+    </div>
+  </div>
+{% endblock %}

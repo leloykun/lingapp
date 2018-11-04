@@ -1,0 +1,22 @@
+{% extends "bootstrap/base.html" %}
+{% block title %} Healthy {% endblock %}
+{% block content %}
+  <img src="static/images/phone.jpg" style="position:absolute" width="320">
+  <button type="button" onclick="window.location.href='/portal'" class="btn btn-dark" style="position:absolute;
+                           left: 40px;
+                           top: 105px;
+                           font-size: small">Back</button>
+  <p style="position: absolute;
+             left: 40px;
+             top: 160px;
+             font-size:large">The patient is unlikely to have<br />
+                              this disease. However, we<br />
+                              still recommend consulting a<br />
+                              doctor should concerns arise.</p>
+  <img src="static/images/telehealth.jpg" style="position:absolute; left:30px; top:280px" width="250">
+  <p style="position: absolute;
+             left: 43px;
+             top: 500px;
+             font-size:large;
+             font-size:small"> Tap to consult with a Telehealth provider </p>
+{% endblock %}
