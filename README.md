@@ -1,6 +1,6 @@
 # Lingapp
 
-An app for the early detection of common women's diseases such as cervical cancer and heart disease.
+An app for the early detection of common women's diseases such as cervical cancer and heart disease (in cooperation with Florante Galura Jr.)
 
 ![](https://github.com/leloykun/lingapp/blob/master/static/images/screenshot.png)
 
