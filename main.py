@@ -3,17 +3,6 @@ from flask_wtf import Form
 from flask_bootstrap import Bootstrap
 from wtforms import StringField, PasswordField, FloatField
 from wtforms.validators import InputRequired
-import wtforms
-
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import scikitplot as skplt
-from sklearn.model_selection import train_test_split
-from sklearn import preprocessing
-from sklearn.preprocessing import Imputer
-from pandas.plotting import scatter_matrix
-from sklearn import svm
 
 import _pickle as cPickle
 
@@ -108,7 +97,7 @@ def portal():
 def cervical():
     form = CervicalCancerForm()
     if form.validate_on_submit():
-        with open('cervical_cancer_classifier.pkl', 'rb') as fid:
+        with open('data_analysis/cervical_cancer_classifier.pkl', 'rb') as fid:
             cervical_cancer_classifier = cPickle.load(fid)
 
         data = [[form.age.data,
@@ -157,7 +146,7 @@ def cervical():
 def diabetes():
     form = DiabetesForm()
     if form.validate_on_submit():
-        with open('diabetes_classifier.pkl', 'rb') as fid:
+        with open('data_analysis/diabetes_classifier.pkl', 'rb') as fid:
             diabetes_classifier = cPickle.load(fid)
 
         data = [[form.pregnancies.data,
@@ -180,7 +169,7 @@ def diabetes():
 def fertility():
     form = FertilityForm()
     if form.validate_on_submit():
-        with open('fertility_classifier.pkl', 'rb') as fid:
+        with open('data_analysis/fertility_classifier.pkl', 'rb') as fid:
             fertility_classifier = cPickle.load(fid)
 
         data = [[form.season.data,
@@ -203,7 +192,7 @@ def fertility():
 def spine():
     form = SpineForm()
     if form.validate_on_submit():
-        with open('spine_classifier.pkl', 'rb') as fid:
+        with open('data_analysis/spine_classifier.pkl', 'rb') as fid:
             spine_classifier = cPickle.load(fid)
 
         data = [[form.pelvic_incidence.data,
@@ -229,7 +218,7 @@ def spine():
 def heart():
     form = HeartDiseaseForm()
     if form.validate_on_submit():
-        with open('heart_attack_classifier.pkl', 'rb') as fid:
+        with open('data_analysis/heart_attack_classifier.pkl', 'rb') as fid:
             heart_attack_classifier = cPickle.load(fid)
 
         data = [[form.age.data,
