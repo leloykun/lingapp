@@ -1,6 +1,6 @@
-# Lingapp
+# [Lingapp](http://lingapp-md.appspot.com/)
 
-An app for the early detection of common women's diseases such as cervical cancer and heart disease (in collaboration with Florante Galura Jr.)
+An app for the early detection of common women's diseases such as cervical cancer and heart disease
 
 ![](https://github.com/leloykun/lingapp/blob/master/static/images/screenshot.png)
 
@@ -19,8 +19,16 @@ https://infograph.venngage.com/ps/q5HPPcgu8C0/mhealth-pitchdeck
 * Scikit-Learn
 
 ### How to run
-On the command line:
+First, install the required libraries:
 ```{bash}
-export FLASK_APP=main.py
-flask run
+pip3 install -r requirements.txt
 ```
+Then run `main.py`
+```{bash}
+python3 main.py
+```
+Then open your browser, go to `127.0.0.1:5000`, and have fun!
+
+### Authors
+- Franz Louis Cesista
+- Florante Galura Jr.
